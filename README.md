@@ -165,6 +165,7 @@ python ADPulse.py --domain corp.local --user jsmith --password 'P@ssw0rd!' --no-
 | `--domain` | Yes | — | Target AD domain (e.g. `corp.local`) |
 | `--user` | Yes | — | Domain username |
 | `--password` | Yes | — | Domain password |
+| `--hash` | Only without Password | — | Domain NTLM hash |
 | `--dc-ip` | No | Auto-resolved | Domain Controller IP address |
 | `--report` | No | `all` | Report format: `console`, `json`, `html`, or `all` |
 | `--output-dir` | No | `.` | Parent directory for the `Reports/` folder |
