@@ -1,0 +1,5 @@
+ldap3>=2.9
+colorama>=0.4.6
+dnspython>=2.4.0
+pycryptodome
+weasyprint
