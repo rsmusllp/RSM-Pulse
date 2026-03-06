@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """
-AD Security Scanner - Entry Point
+RSM Pulse Security Scanner - Entry Point
 
 Usage examples
 ──────────────
   # Plaintext password (existing behaviour, unchanged)
-  python ADPulse.py --domain corp.local --user admin --password 'P@ssw0rd!'
+  python rsm-pulse.py --domain corp.local --user admin --password 'P@ssw0rd!'
 
   # NT hash only (pass-the-hash)
-  python ADPulse.py --domain corp.local --user admin --hash 31d6cfe0d16ae931b73c59d7e0c089c0
+  python rsm-pulse.py --domain corp.local --user admin --hash 31d6cfe0d16ae931b73c59d7e0c089c0
 
   # LM:NT hash pair (pass-the-hash)
-  python ADPulse.py --domain corp.local --user admin --hash aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0
+  python rsm-pulse.py --domain corp.local --user admin --hash aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0
 
   # With explicit DC and HTML-only report
-  python ADPulse.py --domain corp.local --user admin --hash <NT> \
+  python rsm-pulse.py --domain corp.local --user admin --hash <NT> \
       --dc-ip 10.0.0.1 --report html
 """
 
@@ -31,7 +31,7 @@ from report import print_report, export_json, export_html
 
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        description="ADPulse — Open-Source Active Directory Security Scanner",
+        description="RSM Pulse — Active Directory Security Scanner",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
@@ -83,11 +83,11 @@ def main() -> None:
         pass
 
     # ── Banner ────────────────────────────────────────────────────────────────
-    print("╔═══════════════════════════════════════════╗")
-    print("║ ADPulse Active Directory Security Scanner ║")
-    print("║                version 1.0                ║")
-    print("║                by TheMayor                ║")
-    print("╚═══════════════════════════════════════════╝\n")
+    print("╔═════════════════════════════════════════════╗")
+    print("║ RSM Pulse Active Directory Security Scanner ║")
+    print("║                  version 1.0                ║")
+    print("║                  by TheMayor                ║")
+    print("╚═════════════════════════════════════════════╝\n")
 
     # ── Credential handling ───────────────────────────────────────────────────
     password = ""
@@ -160,3 +160,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n[!] Interrupted by user (Ctrl+C). Exiting.")
         sys.exit(130)
+
