@@ -3,7 +3,7 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M03Q2JN)
 
 <p align="left">
-  <img src="https://github.com/dievus/ADPulse/blob/main/images/image.png"/>
+  <img src="https://github.com/rsmusllp/RSM-Pulse/blob/main/images/image.png"/>
 </p>
 
 RSM Pulse is an open-source Active Directory security auditing tool that connects to a domain controller via LDAP(S), runs 35 automated security checks, and produces detailed reports in console, JSON, and HTML formats.
